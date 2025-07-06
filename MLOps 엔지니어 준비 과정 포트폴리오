@@ -47,7 +47,7 @@
 - loops.py : 반복문 예제
 - functions.py : 함수 예제
 
-
+# 25.07.06 일
 print("hello, world!")
 print("hello")
 # print("ctrl + / 입력 시 주석이 되어 컴퓨터는 읽지 못하게 할 수 있습니다. or #을 입력 후 작성하면 읽지 못하게 할 수 있습니다.")
