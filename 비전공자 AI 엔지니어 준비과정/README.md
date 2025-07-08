@@ -118,7 +118,9 @@ print(7%3)
 # 나눗셈 후 몫을 리턴하는 // 연산자(몫을 구하는 법)
 print(7//3)
 
-### 문자열 자료형 만드는 4가지 방법
+### 문자열
+
+## 문자열 자료형 만드는 4가지 방법
 
 # 1. 큰따옴표로 양쪽 둘러싸기
 # 2. 작은따옴표로 양쪽 둘러싸기
@@ -135,12 +137,114 @@ print(type(a))
 a = 'Life is too shrt, you need Pythoon'
 print(type(a))
 
-# 따옴표안에 다른 따옴표 넣는 방법 
+## 따옴표안에 다른 따옴표 넣는 방법 
 a = "Life ' is too shrt, you need Pythoon"
 b = 'Life " is too shrt, you need Pythoon'
 print(type(a))
 
-# 같은 따옴표를 넣는 방법
+## 같은 따옴표를 넣는 방법
 a = "Life\" is too shrt, you need Pythoon"
 print(a)
 # \ 가 특수기호 역할을 하여 따옴표가 중복되도 끝나지 않음
+
+## 여러 줄인 문자열을 변수에 대입하는 방법(줄바꿈)
+# 1. 줄을 바꾸기 위한 이스케이프 코드 \n 삽입하기
+a = "Life is too shrt \nyou need Pythoon"
+print(a)
+
+# 2. 문자 시작과 끝에 """ or ''' 삽입하여 줄 바꾸기 실행
+a = """Life is too shrt 
+you need Pythoon"""
+print(a)
+# 실행하면 """ Life is too shrt
+#             you need Pythoon"""로 출력
+
+## 이스케이프 코드 : 프로그래밍할 때 사용할 수 있도록 미리
+# 정의해 둔 '문자 조합'을 말함
+
+## 이스케이프 코드 설명
+# \n : 문자열 안에서 줄을 바꿀 때 사용
+
+# \t : 문자열 사이에 탭 간격을 줄 때 사용(자주 사용x)
+a = "Life is too shrt \tyou need Pythoon"
+print(a)
+# 출력값 Life is too shrt      you need Pythoon
+
+# \\ : \를 그대로 표현할 때 사용
+a = "Life is too shrt \\you need Pythoon"
+print(a)
+# 출력값 Life is too shrt \you need Pythoon
+
+# \' : 작음따옴표를 그대로 표현할 때 사용
+# \" : 큰따옴표를 그대로 표현할 때 사용
+
+# 아래는 프로그램에서 잘 사용하지 않음
+# \r : 캐리지 리턴(줄 바꿈 문자, 커서를 현재 줄의 가장 앞으로 이동)
+# \f : 폼 피드(줄 바꿈 문자, 커서를 현재 줄의 다음 줄로 이동)
+# \a : 벨 소리(출력할 때 pc 스피커에서 '삑' 소리가 난다)
+# \b : 백 스페이스
+# \000 : 널 문자
+
+## 문자열 연산
+
+## 문자열 더해서 연결하기
+head = "python"
+tail = " is fun!"
+print(head + tail)
+# 출력값 python is fun!
+
+## 문자열 곱하기(반복해서 붙인다)
+a= "python"
+print(a*3)
+# 출력값 pythonpythonpython
+
+## 문자열 곱하기 응용하기
+# multustring.py
+print("="*50)
+print("My Program")
+print("="*50)
+# 반복된 문자를 빠르게 입력 가능하게 됨 
+
+## 문자열 길이 구하기(띄어쓰기 수도 포함)
+a = "Life is too short"
+print(len(a))
+
+## 문자열 인덱싱과 슬라이싱
+a = "Life is too short, you need Python"
+print(a[3])
+# 출력값 e
+# 인덱싱 : 문자열를 1개씩 뽑아오는 기능
+# 문자열 순서대로 카운팅 시작은 0 단위로 시작, 공백도 카운터 됨
+
+## 문자열 활용
+a = "Life is too short, you need Python"
+print(a[0])
+print(a[12])
+print(a[-1]) # -1은 문자열에 역순으로 시작
+# 출력값 "L", "s", "n" 
+
+## 문자열 슬라이싱 : 범위를 정해서 가져오는 기능
+a = "Life is too short, you need Python"
+b = a[0:4]
+print(b)
+# 출력값 Life
+# a[a이상 : b미만 : c간격] " : "가 1개 일시 이상 미만만 사용
+
+# a[시작_번호:끝_번호]에서 끝 번호 부분을 생략하는 방법
+a = "Life is too short, you need Python"
+b = a[19:] # 끝 번호를 생략할 시 문자열 끝까지 지정하여 가져옴
+print(b)
+# 출력값 you need Python
+
+# 간격 적용 방법
+a = "Life is too short, you need Python"
+b = a[::2] # 문자열 2칸씩 띄고 가져옴
+print(b)
+
+a = "Life is too short, you need Python"
+b = a[::-1] # 거꾸로 가져옴
+print(b)
+
+a = "Life is too short, you need Python"
+b = a[::-2] # 거꾸로 2칸씩 띄고 가져옴
+print(b)
