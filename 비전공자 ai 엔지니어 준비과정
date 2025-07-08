@@ -32,6 +32,29 @@
 
 ---
 
+#수정필요
+
+폴더구조
+study-log/
+├─ README.md
+├─ 01_python_basics/
+│   ├─ hello_world.py
+│   ├─ variables_and_types.py
+│   └─ README.md
+├─ 02_data_analysis/
+│   ├─ pandas_tutorial.ipynb
+│   ├─ numpy_examples.py
+│   └─ README.md
+├─ 03_machine_learning/
+│   ├─ linear_regression.py
+│   ├─ decision_tree.py
+│   └─ README.md
+└─ 04_deep_learning/
+    ├─ neural_network_basic.py
+    ├─ cnn_example.ipynb
+    └─ README.md
+
+
 ## 연락처
 
 궁금한 점이나 피드백은 이메일(youremail@example.com)로 연락 주세요.
@@ -55,3 +78,5 @@ print("hello")
 # 변수
 # 변수란 상자개념 상자안에 값을 담는다라고 이해하면 편합니다.
 # a=3은 같다는 개념이 아니라 a안에 3을 담는다는 개념입니다.
+
+
