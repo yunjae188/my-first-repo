@@ -248,3 +248,36 @@ print(b)
 a = "Life is too short, you need Python"
 b = a[::-2] # 거꾸로 2칸씩 띄고 가져옴
 print(b)
+
+# 슬라이싱에서 인덱싱 적용하는 방법
+
+a = "20230331Rainy"
+date = a[:8] 
+weather = a[8:]
+print(date)
+print(weather)
+# 출력값 "20230331", "Rainy"
+
+## 문자열 포매팅
+# 문자열 포매팅 : 특정 문자열을 바꾸고 싶을때 사용하는 기술
+
+# 1. 숫자 바로 대입
+a = "I eat %d apples." % 3 
+print(a)
+# 출력값 I eat 3 apples
+# %d란 decimal [데시마일(십진의)] 문자를 쓰고 %뒤에 숫자를 가져옴
+
+# 2. 문자열 바로 대입
+a = "I eat %s apples." % "five" 
+print(a)
+
+# 3. 숫자 값을 나타내는 변수를 대입
+number = 3
+a = "I eat %d apples." % number 
+print(a)
+
+# 4. 2개 이상의 값 넣기
+number = 3
+day = "theree"
+a = "I eat %d apples. so I was sick for %s day" % (number,day) 
+print(a)
