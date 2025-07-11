@@ -281,3 +281,64 @@ number = 3
 day = "theree"
 a = "I eat %d apples. so I was sick for %s day" % (number,day) 
 print(a)
+
+# 문자열 포맷 코드
+# %s(문자열), %c(문자 1개), %d(정수)
+# %f(부동소수),%o(8진수),%x(16진수),%%(문자 % 자체)
+
+## 포맷 코드와 숫자 함께 사용하기
+# 1. 정렬과 공백
+a = "%10s" % "hi" # 전체 길이가 10개인 문자열 공간에서 대입되는 값을 오른쪽으로 정렬하고 그 앞의 나머지는 공백으로 남겨 두라는 의미
+print(a)
+# 출력값 ->        hi
+# 왼쪽 정렬하는 방법 -> 자주 안 나옴
+a = "%-10sjane." % "hi"
+print(a)
+# 출력값 ->hi       jane.
+# jane 텍스트 그대로 입력되어 제외한 나머지 문자열 10개인 공간에서
+# hi를 왼쪽에 채우고 나머지를 채움 
+
+# 2. 소수점 표현하기
+a = "%0.4f" % 3.42134234
+print(a)
+
+# 숫자 바로 대입하기
+a = "I eat {0} apples".format(3)
+print(a)
+
+# 2개 이상의 값 넣기
+number = 10
+day = "three"
+a = "I ate {0} apples. so I was sick for {1} days.".format(number, day) # (1번쨰 괄호, 2번째 괄호)
+print(a)
+
+# 이름으로 넣기
+a = "I ate {number} apples. so I was sick for {day} days.".format(number=10, day=3) # (1번쨰 괄호, 2번째 괄호)
+print(a)
+
+# 인덱스와 이름을 혼용해서 넣기
+a = "I ate {0} apples. so I was sick for {day} days.".format(10, day=3) # (1번쨰 괄호, 2번째 괄호)
+print(a)
+
+# 정렬(잘 안씀 이런게 있다는 참고용)
+a = "{0:<10}".format("hi") # < : 왼쪽 정렬하고 hi 제외한 8칸
+print(a)
+a = "{0:>10}".format("hi") # > : 오른쪽 정렬하고 hi 제외한 8칸
+print(a)
+a = "{0:^10}".format("hi") # ^ : 가운데 정렬하고 hi 제외한 8칸
+print(a)
+
+# 공백 채우기(잘 안씀)
+a = "{0:=^10}".format("hi") # ^ : 가운데 정렬하고 hi 제외한 8칸 나머지는 '='로 채우겠다
+print(a)
+
+# 소수점 표현하기(잘 안씀)
+y = 3.42134234
+a = "{0:0.4f}".format(y) # {format(y),소수점 4자리름 표현하겠다}
+print(a)
+
+# f문자열 포매팅(최신 중요)
+name = '홍길동'
+age = 30
+a = f'나의 이름은 {name}입니다. 나이는 {age}입니다.'
+print(a)
